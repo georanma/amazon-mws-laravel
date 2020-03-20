@@ -11,6 +11,12 @@ Currently optimizing for Lumen Framework.
 
 This is __NOT__ for Amazon Web Services (AWS) - Cloud Computing Services.
 
+### Release 4.0 Breaking Changes
+If you are not using Lumen Framework >=7.0, please look at release tags <4.0. Below 4.0 is confirmed compatible with
+Lumen 5.5, but I can  not confirm compatibility between 5.5 and 6.0 below tag 4.0. This will depend on the required 
+illuminate\support version for your Lumen version. 
+
+
 ## Installation
 
 1. `composer require georanma/lumen-amazon-mws`
