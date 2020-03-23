@@ -443,7 +443,7 @@ class AmazonOrderList extends AmazonOrderCore implements Iterator
                 break;
             }
             $this->orderList[$this->index] = new AmazonOrder($this->storeName, null, $data, $this->mockMode,
-                $this->mockFiles, $this->config);
+                $this->mockFiles);
             $this->orderList[$this->index]->mockIndex = $this->mockIndex;
             $this->index++;
         }

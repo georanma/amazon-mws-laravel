@@ -106,7 +106,6 @@ abstract class AmazonCore
     protected $throttleStop = false;
     protected $storeName;
     protected $options;
-    protected $config;
     protected $mockMode = false;
     protected $mockFiles;
     protected $mockIndex = 0;
@@ -130,7 +129,6 @@ abstract class AmazonCore
      * @param array|string $m [optional] <p>The files (or file) to use in Mock Mode.
      * When Mock Mode is enabled, the object will retrieve one of these files
      * from the list to use as a response. See <i>setMock</i> for more information.</p>
-     * @param string $config [optional] <p>An alternate config file to set. Used for testing.</p>
      */
     protected function __construct($s, $mock = false, $m = null)
     {

@@ -46,7 +46,6 @@ class AmazonShipmentList extends AmazonInboundCore implements \Iterator
      * @param boolean $mock [optional] <p>This is a flag for enabling Mock Mode.
      * This defaults to <b>FALSE</b>.</p>
      * @param array|string $m [optional] <p>The files (or file) to use in Mock Mode.</p>
-     * @param string $config [optional] <p>An alternate config file to set. Used for testing.</p>
      */
     public function __construct($s, $mock = false, $m = null)
     {
@@ -380,7 +379,7 @@ class AmazonShipmentList extends AmazonInboundCore implements \Iterator
             $n = 0;
             foreach ($this->shipmentList as $x) {
                 $a[$n] = new AmazonShipmentItemList($this->storeName, $x['ShipmentId'], $this->mockMode,
-                    $this->mockFiles, $this->config);
+                    $this->mockFiles);
                 $a[$n]->setUseToken($token);
                 $a[$n]->mockIndex = $this->mockIndex;
                 $a[$n]->fetchItems();
@@ -390,7 +389,7 @@ class AmazonShipmentList extends AmazonInboundCore implements \Iterator
         } else {
             if (is_int($i)) {
                 $temp = new AmazonShipmentItemList($this->storeName, $this->shipmentList[$i]['ShipmentId'],
-                    $this->mockMode, $this->mockFiles, $this->config);
+                    $this->mockMode);
                 $temp->setUseToken($token);
                 $temp->mockIndex = $this->mockIndex;
                 $temp->fetchItems();
